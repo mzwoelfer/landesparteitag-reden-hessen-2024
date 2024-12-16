@@ -1,0 +1,245 @@
+[
+    {
+        "reminder": null,
+        "name": "Dr. Anna L\u00fchrmann",
+        "beginSpeech": "2:12:18",
+        "endSpeech": "2:18:39",
+        "question": "Questions",
+        "beginQuestions": "2:20:00",
+        "endQuestions": "2:21:36"
+    },
+    {
+        "reminder": null,
+        "name": "Omid Nouripour",
+        "beginSpeech": "2:29:01",
+        "endSpeech": "2:34:30",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Deborah D\u00fcring",
+        "beginSpeech": "2:45:13",
+        "endSpeech": "2:50:28",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Tarek Al-Wazir",
+        "beginSpeech": "2:56:25",
+        "endSpeech": "3:01:45",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Ayse Asar",
+        "beginSpeech": "3:10:14",
+        "endSpeech": "3:15:12",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Awet Tesfaiesus",
+        "beginSpeech": "3:18:29",
+        "endSpeech": "3:24:06",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Philip Kr\u00e4mer",
+        "beginSpeech": "3:33:49",
+        "endSpeech": "3:38:30",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Boris Mijatovic",
+        "beginSpeech": "3:42:09",
+        "endSpeech": "3:47:06",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Mahwish Iftikhar",
+        "beginSpeech": "3:54:15",
+        "endSpeech": "3:59:39",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Marie-Louise Pulse",
+        "beginSpeech": "4:02:56",
+        "endSpeech": "4:07:48",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Andreas May",
+        "beginSpeech": "4:17:38",
+        "endSpeech": "4:22:08",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Jacob Spanke",
+        "beginSpeech": "4:26:19",
+        "endSpeech": "4:31:19",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Christian Tramnitz",
+        "beginSpeech": "4:34:54",
+        "endSpeech": "4:40:18",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Carola Carius",
+        "beginSpeech": "4:53:03",
+        "endSpeech": "4:58:18",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Ilka Deutschendorf",
+        "beginSpeech": "4:59:50",
+        "endSpeech": "5:03:40",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Katerina Garcia",
+        "beginSpeech": "5:04:46",
+        "endSpeech": "5:10:20",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Andriy Goldmann",
+        "beginSpeech": "5:25:12",
+        "endSpeech": "5:29:30",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Boris Wilfert",
+        "beginSpeech": "5:32:35",
+        "endSpeech": "5:37:58",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Michel Z\u00f6rb",
+        "beginSpeech": "5:38:38",
+        "endSpeech": "5:43:47",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Isabel K\u00f6hler-Hande",
+        "beginSpeech": "5:51:55",
+        "endSpeech": "5:57:01",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Maximilian Kohler",
+        "beginSpeech": "6:11:45",
+        "endSpeech": "6:16:56",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Jan Marien",
+        "beginSpeech": "6:17:57",
+        "endSpeech": "6:22:59",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Gerwin Meinke",
+        "beginSpeech": "6:24:00",
+        "endSpeech": "6:29:55",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Philip Schinkel",
+        "beginSpeech": "6:30:37",
+        "endSpeech": "6:35:43",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Doris Jensch",
+        "beginSpeech": "6:49:00",
+        "endSpeech": "6:53:18",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Esra Edel",
+        "beginSpeech": "7:01:48",
+        "endSpeech": "7:06:25",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    },
+    {
+        "reminder": null,
+        "name": "Pilar Butte",
+        "beginSpeech": "7:40:50",
+        "endSpeech": "7:45:09",
+        "question": null,
+        "beginQuestions": null,
+        "endQuestions": null
+    }
+]

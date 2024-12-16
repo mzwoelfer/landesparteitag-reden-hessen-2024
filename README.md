@@ -17,10 +17,11 @@ pip install -r requirements.txt
 
 ## How to run?
 1. Create `speeches_1.md`. Get timestamps for speeches from YouTUbe video
-2. `python3 getSpeechesInfo.py`
-2. transcribeSpeeches.py
-4. includeYouTubeID.py
-3. summarizeSpeeches.py
+2. `python3 getSpeechesInfo.py speeches_1.md`
+3. `python3 cut_speeches.py speeches_1_info.json landesparteitag.mp4`
+4. `python3 transcribeSpeeches.py speeches_1_info.json`
+5. includeYouTubeID.py
+6. summarizeSpeeches.py
 
 
 Analysis could be:
