@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply font-gruene-text;
+    }
+}
+
+@font-face {
+    font-family: GRUENE_TEXT;
+    src: url('@/assets/fonts/pt_sans_regular.ttf');
+}
