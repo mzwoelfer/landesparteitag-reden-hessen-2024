@@ -51,6 +51,5 @@ for info in speech_info_list:
     audioFile = os.path.join(folder, export_name + ".mp3")
     print("Working on:", audioFile)
 
-    print(os.getenv('OPENAI_API_KEY'))
     transcribeFile(audioFile, info)
     print()
