@@ -1,4 +1,4 @@
-import openai
+from openai import OpenAI
 import os
 from dotenv import load_dotenv
 import json
@@ -6,8 +6,8 @@ from glob import glob
 import time
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAPI_KEY")
 folder = "speeches"
+client = OpenAI()
 
 for speech_txt_file in glob(folder + '/*.txt'):
     print("Getting summary and buzzwords for:", speech_txt_file)
@@ -30,32 +30,70 @@ for speech_txt_file in glob(folder + '/*.txt'):
         "Extrahiere die 5 wichtigsten Schlagworte und konkreten politischen Forderungen aus dieser Rede als Python-Liste:\n\n"
     )
     summarize_prompt = (
-        "Eine Zusammenfassung der Rede in weniger als vier Sätzen für Leute, die die Veranstaltung nicht besuchten:\n\n"
+        "Eine Zusammenfassung der Rede in weniger als drei Sätzen. Für Leute die die Veranstaltung nicht besuchten:\n\n"
     )
 
-    summary = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=summarize_prompt + speech_text,
-        temperature=0.73,
-        max_tokens=500,
+    summary = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {
+                "role": "system",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": summarize_prompt
+                    }
+                ]
+            },
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": speech_text
+                    }
+                ]
+            }
+        ],
+        temperature=1,
+        max_tokens=1000,
         top_p=1,
-        frequency_penalty=0.8,
+        frequency_penalty=0,
         presence_penalty=0
     )
 
-    buzzword = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=buzzword_prompt + speech_text,
-        temperature=0.73,
-        max_tokens=500,
+    buzzword = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {
+                "role": "system",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": buzzword_prompt
+                    }
+                ]
+            },
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": speech_text
+                    }
+                ]
+            }
+        ],
+        temperature=1,
+        max_tokens=1000,
         top_p=1,
-        frequency_penalty=0.8,
+        frequency_penalty=0,
         presence_penalty=0
     )
 
     jsonData["text"] = speech_text
-    jsonData["summary"] = summary["choices"][0]["text"].strip()
-    jsonData["buzzword"] = buzzword["choices"][0]["text"].strip()
+    jsonData["summary"] = summary.choices[0].message.content.strip()
+    jsonData["buzzword"] = buzzword.choices[0].message.content.strip()
     jsonData["youtube_id"] = "L9ePHyT1fZM"
 
     with open(speech_json_file, "w", encoding="utf-8") as f:
