@@ -10,7 +10,7 @@
       </div>
     </nav>
 
-    <router-view class="h-screen" :key="$route.fullPath" />
+    <router-view class="h-full" :key="$route.fullPath" />
 
     <!-- FOOTER -->
     <footer class="bg-gruene-tanne">
