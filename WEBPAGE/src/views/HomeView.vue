@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import speechesData from '@/assets/speeches_summary_buzzwords.json';
 
-let isNavbarMenuActive = false
-let speeches = []
-let searchTerm = ""
-let searchQuery = ''
-let maxResults = 5
-let showAllResults = false
+let isNavbarMenuActive = ref(false)
+let speeches = ref([])
+let searchTerm = ref("")
+let searchQuery = ref('')
+let maxResults = ref(5)
+let showAllResults = ref(false)
 let activeSearchFilter = {
   name: "Sprecher",
   active: true,
@@ -32,6 +34,13 @@ let searchFilter = [
     search: "text"
   }
 ]
+
+onMounted(() => {
+  speeches.value = speechesData.map((speech: any) => ({
+    name: speech.name,
+    speak_time: `${speech.beginSpeech} - ${speech.endSpeech}`
+  }));
+});
 </script>
 
 <template>
