@@ -4,7 +4,7 @@
     <p>Redezeit: {{ currentSpeech?.speak_time }} </p>
     <div v-if="currentSpeech">
       <iframe class="w-full h-full h-64 md:h-96"
-        :src="`https://www.youtube.com/embed/${currentSpeech?.youtube_id}?si=VtBwutTzcNjIDolM&amp;start=${startSeconds}`"
+        :src="`https://www.youtube.com/embed/${currentSpeech?.youtube_id}?si=VtBwutTzcNjIDolM&amp;start=${currentSpeech?.begin_speech}`"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
@@ -48,8 +48,5 @@ const currentSpeech = computed(() =>
   store.speeches.find((speech) => speech.handle === route.params.speaker)
 );
 
-const startSeconds = computed(() => {
-  const timeParts = currentSpeech.value?.speak_time.split(':').map(Number) || [0];
-  return timeParts[0] * 60 + (timeParts[1] || 0);
-});
+
 </script>

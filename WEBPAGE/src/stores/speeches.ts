@@ -19,10 +19,17 @@ function createHandle(name: string): string {
     return name.replace(/\s/g, '_').toLowerCase();
 }
 
+function calculateSeconds(timeString: string): number {
+    const [hours, minutes, seconds] = timeString.split(':').map(Number);
+    return (hours || 0) * 3600 + (minutes || 0) * 60 + (seconds || 0);
+}
+
+
 export const useSpeechesStore = defineStore('speeches', {
     state: () => ({
         speeches: [] as {
             name: string,
+            begin_speech: number,
             speak_time: string,
             text: string,
             buzzwords: string[],
@@ -35,6 +42,7 @@ export const useSpeechesStore = defineStore('speeches', {
         loadSpeeches() {
             this.speeches = speechesData.map((speech: any) => ({
                 name: speech.name,
+                begin_speech: calculateSeconds(speech.beginSpeech),
                 speak_time: calculateDuration(speech.beginSpeech, speech.endSpeech),
                 buzzwords: speech.buzzwords,
                 summary: speech.summary,
