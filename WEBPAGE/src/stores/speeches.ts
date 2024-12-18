@@ -27,7 +27,8 @@ export const useSpeechesStore = defineStore('speeches', {
             text: string,
             buzzwords: string[],
             summary: string,
-            handle: string
+            handle: string,
+            youtube_id: string,
         }[],
     }),
     actions: {
