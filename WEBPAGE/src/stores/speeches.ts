@@ -39,6 +39,7 @@ export const useSpeechesStore = defineStore('speeches', {
                 summary: speech.summary,
                 text: speech.text,
                 handle: createHandle(speech.name),
+                youtube_id: 'L9ePHyT1fZM'
             }));
             console.log("HANDLES:", this.speeches)
         },
