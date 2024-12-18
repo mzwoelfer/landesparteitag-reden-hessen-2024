@@ -15,20 +15,20 @@
 
     <div id="article" v-if="currentSpeech">
       <div class="bg-white p-4 drop-shadow">
-        <h2 class="text-xl font-bold">Zusammenfassung:</h2>
-        <p class="text-2xl prose">{{ currentSpeech?.summary }}</p>
+        <h2 class="text-2xl font-bold">Zusammenfassung:</h2>
+        <p class="text-xl prose">{{ currentSpeech?.summary }}</p>
       </div>
 
-      <div class="flex flex-col bg-gruene-green rounded-lg p-4 mb-4 text-sm text-gruene-green-accent" role="alert">
-        <h2 class="text-xl prose font-bold text-gruene-yellow">Schlagworte:</h2>
-        <ul class="text-white text-2xl list-inside">
+      <div class="flex flex-col bg-gruene-tanne rounded-lg p-4 mb-4 text-sm text-gruene-green-accent" role="alert">
+        <h2 class="text-2xl text-white prose font-bold">Schlagworte:</h2>
+        <ul class="text-white text-xl list-inside">
           <li class="list-disc" v-for="word in currentSpeech.buzzwords" :key="word">{{ word }}</li>
         </ul>
       </div>
 
       <div class="bg-white p-4">
         <h2 class="text-2xl">REDE</h2>
-        <p v-html="currentSpeech.text" class="text-2xl prose"></p>
+        <p v-html="currentSpeech.text" class="text-xl prose"></p>
       </div>
     </div>
   </div>

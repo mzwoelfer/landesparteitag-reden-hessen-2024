@@ -16,11 +16,7 @@ function calculateDuration(begin: string, end: string): string {
 }
 
 function createHandle(name: string): string {
-    return name
-        .trim()
-        .toLowerCase()
-        .replace(/\s+/g, '_')
-        .replace(/[^\w_]/g, '');
+    return name.replace(/\s/g, '_').toLowerCase();
 }
 
 export const useSpeechesStore = defineStore('speeches', {
@@ -44,6 +40,7 @@ export const useSpeechesStore = defineStore('speeches', {
                 text: speech.text,
                 handle: createHandle(speech.name),
             }));
+            console.log("HANDLES:", this.speeches)
         },
     },
 });

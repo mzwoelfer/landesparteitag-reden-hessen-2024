@@ -8,12 +8,10 @@
           <div>
             <h3 class="text-xl">Warnung!</h3>
             <div class="flex flex-col">
-              Die Reden wurden automatisiert von 💬 Audio-zu-Text 📜 erstellt.<br>
-              Rechtschreib-, Grammatik- und Formatierungsfehler sind zu erwarten <br><br>
-
-              Redezeiten: Begin der Rede bis Ende der Rede, inkl. Unterbrechungen durch das Präsidium <br>
-              <p class="text-lg">
-                Mehr dazu im <router-link class="underline" to="FAQ">FAQ</router-link>
+              Die Reden sind automatisiert erstellt von 💬 Audio-zu-Text 📜 erstellt.<br>
+              Rechtschreib-, Grammatik- und Formatierungsfehler sind zu erwarten <br>
+              <p><br>
+                Mehr dazu im <router-link class="underline" to="FAQ">FAQ</router-link>.
               </p>
             </div>
           </div>
