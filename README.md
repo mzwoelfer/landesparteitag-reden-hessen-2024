@@ -1,5 +1,5 @@
 # Grüne Hessen Landesparteitag 2024 SpeechAnalyzer
-Get speeches of Landesparteitag of teh GRÜNE Hessen 2024.
+Get speeches of Landesparteitag of the GRÜNE Hessen 2024.
 
 
 ## Prerequisites
@@ -16,10 +16,12 @@ pip install -r requirements.txt
 ```
 
 ## How to run?
-1. Create `speeches_1.md`. Get timestamps for speeches from YouTUbe video
-2. `python3 getSpeechesInfo.py speeches_1.md`
-3. `python3 cut_speeches.py speeches_1_info.json landesparteitag.mp4`
-4. `python3 transcribeSpeeches.py speeches_1_info.json`
+Download the YouTube Audio/Video in MP4 or MP3 format!
+
+1. Create `speeches_timestamps.md`. Get timestamps for speeches from YouTUbe video
+2. `python3 create_speeches_info.py speeches_timestamps.md`
+3. `python3 cut_speeches.py speeches_timestamps_info.json landesparteitag.mp4`
+4. `python3 transcribeSpeeches.py speeches_timestamps_info.json`
 5. includeYouTubeID.py
 6. summarizeSpeeches.py
 
