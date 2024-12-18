@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useSpeechesStore } from '@/stores/speeches';
+import warnung from "@/components/warnung.vue";
 
 let isNavbarMenuActive = ref(false)
 let searchTerm = ref("")
@@ -43,27 +44,9 @@ const speeches = computed(() => speechesStore.speeches);
   <!-- MAIN CONTENT -->
   <main class="flex flex-col space-y-10 max-w-2xl mx-auto p-4">
     <div class="text-xl  flex flex-col justify-center items-left h-full" id="title">
-      <h2 class="text-4xl font-bold">Reden des hessischen Landes-Parteitages der Grünen</h2>
-      <div class="flex bg-gruene-yellow rounded-lg p-4 mb-4 text-sm text-gruene-green-accent" role="alert">
-        <svg class="w-5 h-5 inline mr-3 text-gruene-magenta" fill="currentColor" viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-            clip-rule="evenodd"></path>
-        </svg>
-        <div>
-          <h3>Warnung!</h3>
-          <div class="flex flex-col">
-            Die Reden wurden automatisiert von 💬 Audio-zu-Text 📜 erstellt.<br>
-            Rechtschreib-, Grammatik- und Formatierungsfehler sind zu erwarten <br><br>
+      <h2 class="text-4xl font-gruenetype font-bold">Reden des hessischen Landes-Parteitages der Grünen</h2>
 
-            Redezeiten: Begin der Rede bis Ende der Rede, inkl. Unterbrechungen durch das Präsidium <br>
-            <p class="text-lg">
-              Mehr dazu im <router-link class="underline" to="FAQ">FAQ</router-link>
-            </p>
-          </div>
-        </div>
-      </div>
+      <warnung></warnung>
 
       <div class="space-y-2 bg-white p-4 drop-shadow">
         <h2>Suche:</h2>
@@ -146,7 +129,7 @@ const speeches = computed(() => speechesStore.speeches);
       </ul>
 
       <div class="flex flex-col bg-gruene-green rounded-lg p-4 mb-4 text-sm text-gruene-green-accent">
-        <h3 class="text-gruene-yellow">Quelle: Landesparteitag am 14. Dezember 2024</h3>
+        <h3 class="">Quelle: Landesparteitag am 14. Dezember 2024</h3>
         <div>
           - 🔗 URL: https://www.youtube.com/live/L9ePHyT1fZM
         </div>
@@ -154,9 +137,9 @@ const speeches = computed(() => speechesStore.speeches);
     </div>
 
     <div id="how">
-      <p class="text-xl font-bold">
+      <h3 class="text-xl font-bold">
         Vorgehen:
-      </p>
+      </h3>
       <p>Die Reden wurden aus dem Livestream als Audiodatei herausgeschnitten.
         Anschließend mit dem Audio-zu-Text KI-Modell (<a class="text-blue-500" href="https://openai.com/blog/whisper/"
           target="_blank">OpenAI - Whisper</a>) zu Text umgewandelt.

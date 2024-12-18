@@ -3,7 +3,8 @@
     <h1 class="text-3xl font-bold">FAQ</h1>
     <div class="space-y-4">
 
-      <div v-for="question in faq" :key="question.title" class="odd:bg-white even:bg-yellow-100 p-4 drop-shadow">
+      <div v-for="question in faq" :key="question.title"
+        class="odd:bg-white even:bg-gruene-tanne even:text-white p-4 drop-shadow">
         <h2 class="text-xl">{{ question.title }}</h2>
         <p class="text-xl prose" v-html="question.answer_html">
         </p>
@@ -17,8 +18,8 @@
 const faq = [
   {
     title: "Ist das ein offizielles Projekt der GRÜNEN?",
-    answer_html: `<strong class="text-2xl">NEIN!</strong> <br>
-            Es ist ein Freizeitprojekt und ein guter Weg für mich zu lernen.`
+    answer_html: `NEIN!<br>
+      Es ist ein Freizeitprojekt.`
   },
   {
     title: "Warum haben die Texte Fehler?",
@@ -26,13 +27,10 @@ const faq = [
           target="_blank">Whisper</a> (Sprache-zu-Text) von der Firma <a class="text-blue-500" href="https://openai.com/"
           target="_blank">OpenAI</a> generiert.
 
-          Das KI-Modell hat diverse Nachteile:
+          Das KI-Modell hat einig Probleme:
           <ul class="list-inside list-disc">
             <li>
-              Keine Erkennung unterschiedlicher Sprecher
-            </li>
-            <li>
-              Schwächere Spracherkennung in Deutscher Sprache
+              Kann nicht zwischen unterschiedlichen Sprecherinnen unterscheiden
             </li>
             <li>
               Fehlendes Vokabular
@@ -40,20 +38,19 @@ const faq = [
           </ul>`
   },
   {
-    title: "Warum steht hier nicht das Wahlergebnis, der Kreisverband oder Listenplatz?",
-    answer_html: `War mir bis jetzt zu aufwändig zum einbauen. <br>
+    title: "Wo steht das Wahlergebnis, der Kreisverband oder Listenplatz?",
+    answer_html: `Hier gehts nur um die Reden. <br>
             Für Tips wo es computerlesbare Listen der Wahlergebnisse oder Informationen zu den Kandidaten gibt, oder motivierte Freiwillige bin ich sehr dankbar. <br>
             Kontaktiert mich, siehe unten: <a href="#kontakt">Kontakt</a>`
   },
   {
-    title: "Warum ist bei einigen Rednern die Redezeit nicht angegeben?",
-    answer_html: `Da muss wohl im automatisiertem Prozess was schief gelaufen sein. <br>
-            Die Tatsache, dass die Rede dennoch zu lesen ist deutet auf einen menschlichen Fehler hin.`
+    title: "Warum ist bei einigen Redenden die Redezeit nicht angegeben?",
+    answer_html: `Da ist was schief gelaufen. <br>`
   },
   {
     title: "Wo kann ich meine Rede als Text downloaden?",
     answer_html: `Alle Reden liegen als Text-Datei in einem Projekt auf GitHub.
-            <a href="https://github.com/zwoefler/Data-is-aweseome/tree/master/gruene_hessen_landesparteitag_analyzer/speeches" target="_blank" class="flex underline">
+            <a href="https://github.com/mzwoelfer/Data-is-aweseome/tree/master/gruene_hessen_landesparteitag_analyzer/speeches" target="_blank" class="flex underline">
                 GitHub
               <svg class="w-6 h-6 fill-current" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -68,53 +65,33 @@ const faq = [
   },
   {
     title: "Kannst du XYZ einbauen?",
-    answer_html: `Immer gerne. <br>
-            Habe Verständnis, dass das hier ein Hobbyprojekt ist und Dinge manchmal länger dauern können
-            <br>
-            Geplant sind:
-            <ul class="list-inside list-disc">
-              <li>
-                Zusätzliche Navigationsleiste
-              </li>
-              <li>
-                Standardanalyse (Länger der Rede, Schlagworte, Clustering nach Themen, etc.)
-              </li>
-              <li>
-                MP3 der Rede als Download
-              </li>
-              <li>
-                Sprachwolke: Welche Worte am meisten genutzt
-              </li>
-              <li>
-                Bessere Spracherkennung mit größeren (rechenintesiverem) Modell
-              </li>
-            </ul>`
+    answer_html: `Wenn ich die Zeit finde...`
   },
   {
-    title: "Welche Technologie wird hier verwendet?",
+    title: "Welche Technologie verwendest du?",
     answer_html: `            <ul class="list-inside list-disc">
               <li>
-                <strong>VueJS + Tailwind</strong>: Webseite + Styling
+                <strong>Webseite + Styling</strong>: VueJS + Tailwind
               </li>
               <li>
-                <strong>Firebase</strong>: Hosting + Datenbank auf Googles Firebase Plattform(Ja, DEM Google)
+                <strong>Hosting</strong>: GitHub Pages
               </li>
               <li>
-                <strong>Whisper (OpenAI)</strong>: KI-Modell für Sprache-zu-Text
+                <strong>Sprache-zu-Text</strong>: Whisper (OpenAI)
               </li>
               <li>
-                <strong>Python3</strong>: Script-Sprache zur automatisierten schneiden und Download der Reden aus den beiden YouTubevideos des Landesparteitages
+                <strong>Schneiden und Download der Reden</strong>: Python Skripte
               </li>
               <li>
-                <strong>GitHub:</strong>: Code-Verwaltung und CI (Continuous Integration)
+                <strong>Code-Verwaltung</strong>: GitHub
               </li>
             </ul>`
 
   },
   {
     title: "Kontakt und zusammen arbeiten?",
-    answer_html: `            Über LinkedIn oder GitHub kannst du mich kontaktieren oder anschauen was ich sonst noch tue.
-            <a href="https://github.com/zwoefler/" target="_blank" class="flex  underline">
+    answer_html: `Über LinkedIn oder GitHub kannst du mich kontaktieren oder anschauen was ich sonst noch tue.
+            <a href="https://github.com/mzwoelfer/" target="_blank" class="flex  underline">
                 GitHub
               <svg class=" w-6 h-6 fill-current" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"

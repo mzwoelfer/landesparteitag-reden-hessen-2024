@@ -3,12 +3,48 @@
 @tailwind utilities;
 
 @layer base {
+    body {
+        @apply text-default-text;
+    }
+
     html {
         @apply font-gruene-text;
+    }
+
+    h1, h2, h3{
+        @apply font-gruenetype;
+    }
+
+    a {
+        @apply text-gruene-tanne;
+        text-decoration: none;
+    }
+    a:hover {
+        @apply text-gruene-klee;
+        text-decoration: underline;
+    }
+    a:visited {
+        @apply text-gruene-klee;
+        text-decoration: underline;
+
     }
 }
 
 @font-face {
     font-family: GRUENE_TEXT;
-    src: url('@/assets/fonts/pt_sans_regular.ttf');
+    src: url('@/assets/fonts/pt_sans_regular.ttf') format('truetype');
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: GRUENE_TEXT_BOLD;
+    src: url('@/assets/fonts/pt_sans_bold.ttf') format('truetype');
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gruenetype';
+    src: url('@/assets/fonts/gruenetype.otf') format('opentype');
 }
