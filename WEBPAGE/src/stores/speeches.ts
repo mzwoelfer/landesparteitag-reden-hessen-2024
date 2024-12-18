@@ -15,15 +15,34 @@ function calculateDuration(begin: string, end: string): string {
     return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
 
+function createHandle(name: string): string {
+    return name
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, '_')
+        .replace(/[^\w_]/g, '');
+}
+
 export const useSpeechesStore = defineStore('speeches', {
     state: () => ({
-        speeches: [] as { name: string; speak_time: string }[],
+        speeches: [] as {
+            name: string,
+            speak_time: string,
+            text: string,
+            buzzwords: string[],
+            summary: string,
+            handle: string
+        }[],
     }),
     actions: {
         loadSpeeches() {
             this.speeches = speechesData.map((speech: any) => ({
                 name: speech.name,
                 speak_time: calculateDuration(speech.beginSpeech, speech.endSpeech),
+                buzzwords: speech.buzzwords,
+                summary: speech.summary,
+                text: speech.text,
+                handle: createHandle(speech.name),
             }));
         },
     },
