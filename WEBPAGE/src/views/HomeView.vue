@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import speechesData from '@/assets/speeches_summary_buzzwords.json';
+import { ref, computed } from 'vue';
+import { useSpeechesStore } from '@/stores/speeches';
 
 let isNavbarMenuActive = ref(false)
-let speeches = ref([])
 let searchTerm = ref("")
 let searchQuery = ref('')
 let maxResults = ref(5)
@@ -35,27 +34,9 @@ let searchFilter = [
   }
 ]
 
-function calculateDuration(begin: string, end: string): string {
-  const [beginHours, beginMinutes, beginSeconds] = begin.split(':').map(Number);
-  const [endHours, endMinutes, endSeconds] = end.split(':').map(Number);
+const speechesStore = useSpeechesStore();
+const speeches = computed(() => speechesStore.speeches);
 
-  const beginTimeInSeconds = beginHours * 3600 + beginMinutes * 60 + beginSeconds;
-  const endTimeInSeconds = endHours * 3600 + endMinutes * 60 + endSeconds;
-
-  const durationInSeconds = endTimeInSeconds - beginTimeInSeconds;
-  const minutes = Math.floor(durationInSeconds / 60);
-  const seconds = durationInSeconds % 60;
-
-  return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-}
-
-
-onMounted(() => {
-  speeches.value = speechesData.map((speech: any) => ({
-    name: speech.name,
-    speak_time: calculateDuration(speech.beginSpeech, speech.endSpeech)
-  }));
-});
 </script>
 
 <template>
@@ -146,7 +127,7 @@ onMounted(() => {
       </h3>
       <ul class="grid lg:grid-cols-2 space-y-1">
 
-        <li v-for="speech in speeches" class="bg-white rounded" :key="speech.id">
+        <li v-for="speech in speeches" class="bg-white rounded" :key="speech.name">
           <router-link :to="{
             name: 'Speeches',
             params: {
