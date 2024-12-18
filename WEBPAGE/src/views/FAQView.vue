@@ -50,7 +50,7 @@ const faq = [
   {
     title: "Wo kann ich meine Rede als Text downloaden?",
     answer_html: `Alle Reden liegen als Text-Datei in einem Projekt auf GitHub.
-            <a href="https://github.com/mzwoelfer/Data-is-aweseome/tree/master/gruene_hessen_landesparteitag_analyzer/speeches" target="_blank" class="flex underline">
+            <a href="https://github.com/mzwoelfer/landesparteitag-reden-hessen-2024/tree/master/speeches" target="_blank" class="flex underline">
                 GitHub
               <svg class="w-6 h-6 fill-current" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"

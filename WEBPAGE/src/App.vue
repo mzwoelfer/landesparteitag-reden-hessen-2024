@@ -21,7 +21,7 @@
           </router-link>
         </div>
 
-        <a href="https://github.com/zwoefler/" target="_blank"
+        <a href="https://github.com/mzwoelfer/" target="_blank"
           class="h-10 flex text-white justify-center items-center space-x-4">
           <p class="">
             Martin Fabian Zwölfer
