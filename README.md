@@ -1,6 +1,9 @@
 # Grüne Hessen Landesparteitag 2024 SpeechAnalyzer
 Get speeches of Landesparteitag of the GRÜNE Hessen 2024.
 
+- DATA_AGGREGATION: Get speeches from livestream. + Summary, buzzwords and transcript
+- WEBPAGE: Display speeches on a webpage
+
 
 ## Prerequisites
 Create a Python3 Virtual Environment.
